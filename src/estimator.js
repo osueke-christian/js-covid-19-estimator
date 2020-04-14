@@ -95,8 +95,8 @@ class Solution {
     const avgIncomePopulation = this.input.region.avgDailyIncomePopulation;
     const impact = this.output.impact.infectionsByRequestedTime;
     const severeImpact = this.output.severeImpact.infectionsByRequestedTime;
-    const impactCalc = Math.floor((impact * avgIncomePopulation * avgIncome) * days);
-    const sImpactCalc = Math.floor((severeImpact * avgIncomePopulation * avgIncome) * days);
+    const impactCalc = Math.floor((impact * avgIncomePopulation * avgIncome) / days);
+    const sImpactCalc = Math.floor((severeImpact * avgIncomePopulation * avgIncome) / days);
 
     this.output.impact.dollarsInFlight = impactCalc;
     this.output.severeImpact.dollarsInFlight = sImpactCalc;
