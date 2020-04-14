@@ -63,8 +63,8 @@ class Solution {
     const impact = this.output.impact.severeCasesByRequestedTime;
     const impactCalc = Math.floor(((35 / 100) * this.input.totalHospitalBeds) - impact);
     const severeImpactCalc = Math.floor(((35 / 100) * this.input.totalHospitalBeds) - severeImpact);
-    this.output.impact.hospitalBedsByRequestedTime = impactCalc + 1;
-    this.output.severeImpact.hospitalBedsByRequestedTime = severeImpactCalc + 1;
+    this.output.impact.hospitalBedsByRequestedTime = impactCalc;
+    this.output.severeImpact.hospitalBedsByRequestedTime = severeImpactCalc;
     return this;
   }
 
